@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
+
 
 
 
@@ -16,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/run-migrations', function () {
-    \Artisan::call('migrate', ['--force' => true]);
+   \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
     return 'Migrations run!';
 });
 
