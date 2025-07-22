@@ -17,10 +17,6 @@ use Illuminate\Support\Facades\Artisan;
 
 
 
-Route::get('/run-migrations', function () {
-   \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
-    return 'Migrations run!';
-});
 
 
 //LOGIN FORM
